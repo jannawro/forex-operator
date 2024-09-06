@@ -1,0 +1,27 @@
+# permissions for end users to edit exchangerates.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: forex-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: exchangerate-editor-role
+rules:
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangerates
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangerates/status
+  verbs:
+  - get

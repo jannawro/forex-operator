@@ -1,0 +1,9 @@
+apiVersion: forex.jannawro.dev/v1alpha1
+kind: ExchangeRate
+metadata:
+  labels:
+    app.kubernetes.io/name: forex-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: exchangerate-sample
+spec:
+  # TODO(user): Add fields here

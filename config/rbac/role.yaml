@@ -1,0 +1,58 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangerates
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangerates/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangerates/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangeratewatchers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangeratewatchers/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - forex.jannawro.dev
+  resources:
+  - exchangeratewatchers/status
+  verbs:
+  - get
+  - patch
+  - update

@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- forex_v1alpha1_exchangeratewatcher.yaml
+- forex_v1alpha1_exchangerate.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
